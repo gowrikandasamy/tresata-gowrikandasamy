@@ -1,5 +1,5 @@
 #!/bin/bash
-# Java installation for jenkins
+# Installer script to install JDK, Jenkins, Terraform, Kubectl and AWSCLI during the launch of EC2 instance 
 
 sudo apt update
 sudo apt install openjdk-11-jre -y
