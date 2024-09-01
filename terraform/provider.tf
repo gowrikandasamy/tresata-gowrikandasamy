@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "us-east-1"
+}
+
 locals {
   region = "us-east-1"
   name   = "eks-cluster-cp"
@@ -9,8 +13,4 @@ locals {
   tags = {
     Example = local.name
   }
-}
-
-provider "aws" {
-  region = "us-east-1"
 }
