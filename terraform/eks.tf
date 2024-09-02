@@ -32,15 +32,14 @@ module "eks" {
 
   eks_managed_node_groups = {
     eks-cluster-wn = {
+      ami_type       = "AL2023_x86_64_STANDARD"
+      instance_types = ["m5.xlarge"]
       min_size     = 1
       max_size     = 2
       desired_size = 1
 
-      instance_types = ["t3.large"]
-      capacity_type  = "SPOT"
-
       tags = {
-        ExtraTag = "helloworld"
+        ExtraTag = "Demoapp"
       }
     }
   }
